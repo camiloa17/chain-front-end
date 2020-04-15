@@ -1,0 +1,50 @@
+.NavList{
+  display: inline-block;
+  margin: 0 33px;
+  padding:2px 10px;
+}
+.NavList hr{
+  margin:0;
+  width: 0%;
+  border:2px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+  transform: translateY(10px);
+}
+
+.NavList:hover hr{
+  border:2px solid #D3DAC6;  
+  transition: width 0.3s ease-in-out;
+  width:100%;
+}
+
+.NavList a{
+  text-decoration: none;
+  font-family:'Nunito',sans-serif; 
+}
+
+
+
+@keyframes fillIn-animate{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+@media(max-width:950px){
+    .NavList{
+      padding: 30px 0px;
+    }
+    .NavList:hover hr{
+      display: none;
+    }
+    .NavList hr{
+      display: none;
+    }
+    .NavList a{
+      color:#fff;
+    }
+}
+
+
+

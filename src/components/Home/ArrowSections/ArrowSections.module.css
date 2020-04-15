@@ -1,0 +1,102 @@
+.TriangleSection{
+    position: relative;
+    background-color: #EDAC17;
+    padding:20px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.TriangleUp::after{
+    content:'';
+    width: 80px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    right:0;
+    top:-79px;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    z-index: 1;
+}
+.TriangleDown::before{
+    content:'';
+    width:80px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    bottom: -79px;
+    left:0;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transform: rotate(180deg);
+    z-index: 1;
+}
+.Black,
+.TriangleUp.Black::after,
+.TriangleDown.Black::before{
+    background-color: #2B2A2A;
+}
+
+.Black h2,
+.Black p{
+    color:#EDAC17;
+}
+
+.Yellow,
+.TriangleUp.Yellow::after,
+.TriangleDown.Yellow::before{
+    background-color: #EDAC17;
+}
+
+.Green,
+.TriangleUp.Green::after,
+.TriangleDown.Green::before{
+    background-color: #D3DAC6;
+}
+
+.Grey,
+.TriangleUp.Grey::after,
+.TriangleDown.Grey::before{
+    background-color: #666665;
+    
+}
+.Grey h2,
+.Grey p{
+    color:#D3DAC6;
+}
+
+.TextAndImage{
+    padding-top:100px;
+    width:600px;
+}
+.TextAndImage h2{
+    font-size: 40px;
+}
+
+.TextAndButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom:70px ;
+    width: 400px;
+}
+
+.TextAndButton p{
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+@media(max-width:950px){
+    .TriangleSection{
+        flex-direction: column;
+    }
+
+    .TextAndImage,
+    .TextAndButton{
+        width: 100%;
+    }
+    .TextAndImage img{
+        display: none;
+    }
+    
+}

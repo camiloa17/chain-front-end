@@ -1,0 +1,17 @@
+.Hero{
+    font-size: 40px;
+    margin-top: 200px;
+}
+
+
+@media(max-width:950px){
+    .Hero{
+        margin-top: 0;
+    }
+    .Hero h2{
+        font-size:45px;
+        
+    }
+
+    
+}

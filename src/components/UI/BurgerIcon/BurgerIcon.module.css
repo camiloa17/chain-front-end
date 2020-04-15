@@ -1,0 +1,40 @@
+.BurgerContainer{
+   display: none; 
+}
+
+@media(max-width:950px){
+
+    .BurgerContainer{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        right:20px;
+    }
+    .BurgerContainer div{
+        border-top:2px solid black;
+        width:20px;
+        height:3px;
+        transition: ease-out 0.3s;
+        border-radius:1px;
+    }
+    .Active{
+        transition: ease-in-out 0.3s
+    }
+    
+    .BurgerContainer div.Active{
+        border-top:2px solid #fff;
+    }
+
+    .BurgerTop.Active{
+        transform:translate(-1px,4px) rotate(45deg)
+    }
+
+    .BurgerBottom.Active{
+        transform:translateY(-6px) rotate(-45deg)
+    }
+
+    .BurgerMiddle.Active{
+        opacity:0;
+    }
+}
+

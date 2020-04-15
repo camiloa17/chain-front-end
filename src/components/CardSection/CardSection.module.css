@@ -1,0 +1,15 @@
+.CardSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+@media(max-width:950px){
+    .CardSection{
+        flex-direction: column;
+        margin-top:20px ;
+    }
+    
+}

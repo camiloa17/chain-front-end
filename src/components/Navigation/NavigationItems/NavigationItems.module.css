@@ -1,0 +1,41 @@
+.Nav{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+@media(max-width:950px){
+    .NavContainer{
+      position: absolute;
+      top:0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      transition: height 0.3s ease-in ;
+    }
+    .Active{
+      transition: height 0.3s ease-in;
+    }
+
+    .NavContainer.Active{
+      transition: height 0.3s ease-in;
+      height: 400px;
+    }
+
+    .Nav{
+      overflow: hidden;
+      flex-direction: column;
+      background-color: black;
+      padding-left: 0;
+      padding: 40px 0;
+      width: 100%;
+      text-align: center;
+      margin:0;
+    }
+    
+    
+}
+
+

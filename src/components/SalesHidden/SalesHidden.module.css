@@ -1,0 +1,27 @@
+.Chart{
+    display: flex;
+    flex-direction: row;
+    padding: 0 10%;
+}
+
+.Chart p{
+    align-self: flex-end;
+    margin-bottom: 90px;
+}
+
+
+
+@media(max-width:950px){
+    .Chart{
+        flex-direction: column;
+        flex-flow: wrap;
+    }
+    .Chart img{
+        width:300px;
+    }
+    .Chart p{
+        align-self: start;
+    }
+
+    
+}

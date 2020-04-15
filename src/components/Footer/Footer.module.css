@@ -1,0 +1,28 @@
+.Footer{
+    display: flex;
+    justify-content: space-between;
+    padding:100px 10%;
+    flex-direction: row;
+}
+
+.Footer h2{
+    font-size: 40px;
+}
+
+
+.Footer form{
+    margin-top: 50px;
+    width: 400px;
+}
+
+
+@media(max-width:950px){
+    .Footer{
+        flex-direction: column;
+    }
+
+    .Footer form{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,111 @@
+.CircleSvg{
+    width: 100%;
+    transform: translateY(-80px);
+}
+.Circle{
+    background-color: #2B2A2A;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: -52px;
+    z-index: 1;
+    clip-path: ellipse(60% 28% at 50% 28%)
+}
+
+.Hexagon{
+    width: 100%;
+    height:59px;
+    bottom:-49px;
+    background-color: #2B2A2A;
+    clip-path: polygon(50% 0, 100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+    position: absolute;
+    z-index: 1;
+
+}
+
+.Black{
+    background-color: #2B2A2A;
+    border-top-left-radius: 30% 30px;
+    border-top-right-radius: 30% 30px;
+    padding:110px 0;
+    position: relative;
+}
+
+.Content{
+    display:flex;
+    padding: 0 10%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Text{
+    color:#EDAC17;
+    width: 600px;
+    font-size: 40px;
+}
+
+.HiddenContent{
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.AboutUs{
+    padding:0 10%;
+}
+
+.AboutUs h2{
+    font-size: 40px;
+}
+.AboutUs h2,
+.Cards h3,
+.Cards p{
+    color:#EDAC17;
+}
+
+
+.Card{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Card>img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right:40px;
+    border: 2px solid #EDAC17;
+}
+.Card a>img{
+    padding-right:30px;
+}
+.CardBottom{
+    margin-left:40%;
+}
+
+
+@media(max-width:950px){
+    .Black{
+        padding-bottom:90px;
+    }
+
+    .Text{
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .Card{
+        width: auto;
+        flex-direction: column;
+    }
+    .Card>img{
+        height: 100px;
+        width: 100px;
+    }
+    .CardBottom{
+        margin-left: 0;
+        margin-top:30px;
+    }
+    
+}

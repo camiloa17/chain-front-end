@@ -1,0 +1,16 @@
+.Icons{
+    display: flex;
+    margin-top: 30px;
+    justify-content:flex-start;
+}
+.Icons img{
+    cursor: pointer;
+    padding-right:80px;
+}
+
+@media(max-width:950px){
+    .Icons img{
+        padding-right: 30px;
+    }
+    
+}

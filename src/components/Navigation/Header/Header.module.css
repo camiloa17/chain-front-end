@@ -1,0 +1,9 @@
+.Header{
+  display:flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 0 10%;
+}
