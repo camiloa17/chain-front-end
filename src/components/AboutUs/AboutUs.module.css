@@ -1,0 +1,48 @@
+.AboutUs{
+    padding:0 10%;
+}
+
+.AboutUs h2{
+    font-size: 40px;
+}
+.AboutUs h2,
+.Cards h3,
+.Cards p{
+    color:#EDAC17;
+}
+
+
+.Card{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Card>img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right:40px;
+    border: 2px solid #EDAC17;
+}
+.Card a>img{
+    padding-right:30px;
+}
+.CardBottom{
+    margin-left:40%;
+}
+
+@media(max-width:950px){
+    .Card{
+        width: auto;
+        flex-direction: column;
+    }
+    .Card>img{
+        height: 100px;
+        width: 100px;
+    }
+    .CardBottom{
+        margin-left: 0;
+        margin-top:30px;
+    }
+}

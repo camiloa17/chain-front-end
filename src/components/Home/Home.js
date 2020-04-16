@@ -1,7 +1,7 @@
 import React from "react";
 import UpperSection from '../UpperSection/UpperSection';
-import BlackSection from '../BlackSection/BlackSection';
-import ArrowSectionHidden from '../ArrowSectionHidden/ArrowSectionHidden';
+import BlackSection from '../../containers/BlackSection/BlackSection';
+import ArrowSection from '../../containers/ArrowSection/ArrowSection';
 import Data from '../../assets/information/Home/InfoHome';
 import Footer from '../Footer/Footer';
 
@@ -12,7 +12,7 @@ const Home = () => {
             <BlackSection />
             {Data.arrowSectionData.map(section => {
                 return (
-                    <ArrowSectionHidden
+                    <ArrowSection
                         key={section.id}
                         name={section.name}
                         id={section.id}

@@ -4,9 +4,19 @@
     padding: 0 10%;
 }
 
+
+.ChartCanvas{
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+}
+
 .Chart p{
     align-self: flex-end;
     margin-bottom: 90px;
+    margin-left: 40px;
+    width: 400px;
+    
 }
 
 
@@ -21,6 +31,10 @@
     }
     .Chart p{
         align-self: start;
+    }
+    .ChartCanvas{
+        width: 80vw;
+        height: 50vh;
     }
 
     

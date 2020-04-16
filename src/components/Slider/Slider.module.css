@@ -34,7 +34,7 @@
     transition-delay: 0.4s;
     opacity:1;
 }
-
+.ProjectCard iframe,
 .ProjectCard video,
 .ProjectCard img{
     width:550px;
@@ -69,6 +69,8 @@
     .ImageContainer{
         text-align: center;
     }
+    
+    .ProjectCard iframe,
     .ProjectCard video,
     .ProjectCard img{
         width: 250px;

@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
 import styles from './ContactForm.module.css';
 import Button from '../../components/UI/Button/Button';
+import Spinner from '../../components/UI/Spinner/Spinner';
+import axios from 'axios';
 
 const ContactForm = props =>{
     const [fullName,setName]=useState('');
     const [email,setEmail]=useState('');
     const [message,setMessage]=useState('');
+    const [sending,setSending]=useState({sending:false,sent:false,error:false});
 
 
     function changeName (event){
@@ -19,18 +22,57 @@ const ContactForm = props =>{
     function changeMessage(event) {
         setMessage(event.target.value);
     }
+
+    async function submit(event){
+        try{
+        event.preventDefault();
+        setSending(prev=>{return{...prev,sending:true}});
+       const payload= await axios.post('/api/mail',{
+            fullName:fullName,
+            email:email,
+            message:message
+        });
+        if(payload){
+            console.log(payload.status)
+            if(payload.status===200){
+                setSending({sent:true,sending:false,error:false})
+            }else if(payload.status!==200){
+                setSending({ sent: true,sending:false, error: true })
+            }
+            
+        }
+    }catch(error){
+            setSending({ sent: false, sending: false, error: true });
+            console.log(error);
+            
+    }
+    
+    }
+
+    let formMessage;
+    if(sending.sent){
+        if(sending.sent && sending.error){
+            formMessage = (<p><span role="img" aria-label="Emoji sad">😓</span>Ohh Something went wrong with the server, try again</p>)
+        }else if(sending.sent && !sending.error){
+            formMessage = (<p><span role="img" aria-label="Emoji with sunn-glasses">😎</span>Message Sent!</p>)
+        
+        }
+    } else if (!sending.sent && sending.error) {
+        formMessage = (<p><span role="img" aria-label="emoji sad">😓</span>It seems it was not possible to send the message, try again</p>)
+    }
     
     
 
     return(
-        <form>
+        <form onSubmit={submit}>
             <input className={styles.Input} type='text' placeholder='Full name' onChange={changeName} value={fullName} />
             <input className={styles.Input} type='email' placeholder='Email' onChange={changeEmail} value={email} />
             <textarea className={styles.Input} placeholder='Message' spellCheck={"true"} onChange={changeMessage} value={message} />
             <Button 
                 color='black'
                 buttonType='button'
-            >Send</Button>
+            >{sending.sending ? <Spinner/>:'Send'}</Button>
+            {formMessage}
         </form>
     )
 
