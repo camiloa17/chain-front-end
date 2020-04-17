@@ -8,9 +8,14 @@ const HeroTitle = props => {
     let step=0;
     let oldWord='';
     let element;
+    const ua = navigator.userAgent;
+    const browserTest = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)
 
     useEffect(() => {
-        setTimeout(changeWord, 1000);
+        if (!browserTest){
+            setTimeout(changeWord, 1000);
+        }
+        
     })
 
 
@@ -57,7 +62,7 @@ const HeroTitle = props => {
 
     return (
         <div className={styles.Hero}>
-            <h2 ref={changElement} className={styles.ChangingWord}>{words[0]}</h2>
+            <h2 ref={changElement} className={styles.ChangingWord}>{browserTest?'We want to design and develop your ideas':words[0]}</h2>
             <Button color='black' buttonType='a' urlTarget={props.urlTarget} >{props.buttonText}</Button>
         </div>
     )

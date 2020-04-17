@@ -65,9 +65,9 @@ const ContactForm = props =>{
 
     return(
         <form onSubmit={submit}>
-            <input className={styles.Input} type='text' placeholder='Full name' onChange={changeName} value={fullName} />
-            <input className={styles.Input} type='email' placeholder='Email' onChange={changeEmail} value={email} />
-            <textarea className={styles.Input} placeholder='Message' spellCheck={"true"} onChange={changeMessage} value={message} />
+            <input htmlFor='full-name' className={styles.Input} type='text' placeholder='Full name' onChange={changeName} value={fullName} aria-label="Full-name" />
+            <input id='email-input' className={styles.Input} type='email' placeholder='Email' onChange={changeEmail} value={email} aria-label="Email" />
+            <textarea id='message-box' className={styles.Input} placeholder='Message' spellCheck={"true"} onChange={changeMessage} value={message} aria-label="Message" />
             <Button 
                 color='black'
                 buttonType='button'
