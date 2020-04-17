@@ -3,6 +3,7 @@ import styles from './ContactForm.module.css';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import axios from 'axios';
+import ReactGA from 'react-ga';
 
 const ContactForm = props =>{
     const [fullName,setName]=useState('');
@@ -33,17 +34,31 @@ const ContactForm = props =>{
             message:message
         });
         if(payload){
-            console.log(payload.status)
+            
             if(payload.status===200){
-                setSending({sent:true,sending:false,error:false})
+                
+                ReactGA.event({
+                    category: 'Form Sent',
+                    action: 'Form sent succesfull'
+                });
+                setSending({ sent: true, sending: false, error: false })
             }else if(payload.status!==200){
-                setSending({ sent: true,sending:false, error: true })
+                
+                ReactGA.event({
+                    category: 'Form Sent',
+                    action: 'Form not sent'
+                });
+                setSending({ sent: true, sending: false, error: true })
             }
             
         }
     }catch(error){
+            ReactGA.event({
+                category: 'Form Sent',
+                action: 'Form error'
+            });
             setSending({ sent: false, sending: false, error: true });
-            console.log(error);
+            
             
     }
     

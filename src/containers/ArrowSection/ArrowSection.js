@@ -3,6 +3,7 @@ import styles from './ArrowSection.module.css';
 import Button from '../../components/UI/Button/Button';
 import Slider from '../../components/Slider/Slider';
 import SalesHidden from '../../components/SalesHidden/SalesHidden';
+import ReactGA from 'react-ga';
 
 const ArrowSection = (props) => {
   const {id ,triangleUp,triangleDown,title,paragraph,buttonText,image,color}=props;
@@ -46,7 +47,12 @@ const ArrowSection = (props) => {
     //EventListener for content showing
     
     const clickButtonHandler = (id) => {
-        
+        if(!contentShowing.element.open){
+            ReactGA.event({
+                category: 'View Section',
+                action: `${id==='section-2'?'view projects':'view results'}`
+            });
+        }
         changeContent(prev => {
             const elementHeight = elementDiv.current.scrollHeight;
             return { ...prev, element: { ...prev.element, open: !prev.element.open, height: !prev.element.open ? elementHeight : 0 } }

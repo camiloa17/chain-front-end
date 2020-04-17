@@ -2,6 +2,7 @@ import React,{useState,useRef} from 'react';
 import styles from './BlackSection.module.css';
 import AboutUs from '../../components/AboutUs/AboutUs';
 import Button from '../../components/UI/Button/Button';
+import ReactGA from 'react-ga';
 
 const BlackSection = () => {
 
@@ -12,6 +13,12 @@ const BlackSection = () => {
     //EventListener for content showing
 
     const clickButtonHandler = (id) => {
+        if (!contentShowing.element.open) {
+            ReactGA.event({
+                category: 'View Section',
+                action: 'View About us'
+            });
+        }
         changeContent(prev => {
             const elementHeight = elementDiv.current.scrollHeight;
             return { ...prev, element: { ...prev.element, open: !prev.element.open, height: !prev.element.open ? elementHeight : 0 } }
