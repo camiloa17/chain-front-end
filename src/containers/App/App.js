@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../../components/Home/Home';
 import ReactGA from 'react-ga';
 import ErrorPage from '../../components/Error/Error';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
 function App() {
@@ -10,8 +10,10 @@ function App() {
   ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <BrowserRouter>
-      <Route path='/' exact component={Home} />
-      <Route path='*' component={ErrorPage} />
+      <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/' component={ErrorPage} />
+      </Switch>
     </BrowserRouter>
   );
 }
