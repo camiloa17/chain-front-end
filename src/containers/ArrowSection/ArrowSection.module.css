@@ -128,7 +128,8 @@
         width: 100%;
     }
     .TextAndImage img{
-        display: none;
+        width: 100%;
+        height: 150px;
     }
     .TextAndImage h2{
         font-size: 25px;
