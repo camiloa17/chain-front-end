@@ -3,8 +3,12 @@
 }
 .ChangingWord{
     font-size: 60px;
+    margin-bottom: 10px;
 }
 
+.Hero p{
+    margin-bottom: 30px;
+}
 .ChangingWord::after{
   content: '_';
   animation: blinking 0.8s infinite;

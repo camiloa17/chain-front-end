@@ -32,16 +32,41 @@
 }
 
 .Content{
-    display:flex;
     padding: 0 10%;
+}
+
+.Title{
+    color:#EDAC17;
+    font-size: 40px;
+}
+.Text{
+    width: 726px;
+    color:#EDAC17;
+}
+.Icons{
+    margin: 80px 0;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
-.Text{
+.Icon{
+   padding: 0;
+}
+.Icon img{
+    width: 120px ;
+    height: 140px ;
+}
+.Icon:nth-child(1) h2{
     color:#EDAC17;
-    width: 600px;
-    font-size: 40px;
+}
+.Icon:nth-child(2) h2{
+    color:#D3DAC6;
+}
+.Icon:nth-child(3) h2{
+    color:#939393;
+}
+.Icon:nth-child(4) h2{
+    color:#556F62;
 }
 
 .HiddenContent{
@@ -61,6 +86,10 @@
     .Text{
         font-size: 25px;
         width: 100%;
+    }
+
+    .Icons{
+        flex-direction: column;
     }
     
 }

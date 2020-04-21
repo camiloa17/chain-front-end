@@ -10,22 +10,8 @@
     position: relative;
 }
 
-.Hero::after{
-    position: absolute;
-    content: '^';
-    display: block;
-    color:#fff;
-    font-size: 40px;
-    transform: rotate(180deg) translate(-50%,-70px);
-    z-index: 2;
-    left:50%;
-}
 
-@media(max-width:950px){
-    .Hero::after{
-        display: none;
-    }
-}
+
 
 
 

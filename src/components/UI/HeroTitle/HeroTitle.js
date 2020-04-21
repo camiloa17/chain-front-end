@@ -63,6 +63,7 @@ const HeroTitle = props => {
     return (
         <div className={styles.Hero}>
             <h2 ref={changElement} className={styles.ChangingWord}>{browserTest?'We want to design and develop your ideas':words[0]}</h2>
+            <p>You are one click away from getting your website or mobile app</p>
             <Button color='black' buttonType='a' urlTarget={props.urlTarget} >{props.buttonText}</Button>
         </div>
     )

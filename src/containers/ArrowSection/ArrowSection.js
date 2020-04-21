@@ -1,7 +1,7 @@
 import React, { useState,useRef} from 'react';
 import styles from './ArrowSection.module.css';
 import Button from '../../components/UI/Button/Button';
-import Slider from '../../components/Slider/Slider';
+import Slider from '../Slider/Slider';
 import SalesHidden from '../../components/SalesHidden/SalesHidden';
 import ReactGA from 'react-ga';
 
@@ -52,6 +52,7 @@ const ArrowSection = (props) => {
                 category: 'View Section',
                 action: `${id==='section-2'?'view projects':'view results'}`
             });
+            document.querySelector(`#${id}`).scrollIntoView();
         }
         changeContent(prev => {
             const elementHeight = elementDiv.current.scrollHeight;
@@ -75,7 +76,7 @@ const ArrowSection = (props) => {
             <div className={styles.VisibleContent}>
                 <div className={styles.TextAndImage}>
                     <h2>{title}</h2>
-                    <img src={image} alt='logo-pencil' />
+                    <img src={image} alt={props.alt} />
                 </div>
                 <div className={styles.TextAndButton}>
                     <p>{paragraph}</p>

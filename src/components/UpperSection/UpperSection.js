@@ -9,7 +9,7 @@ const upperSection = () => {
         <div className={styles.Hero}>
             <Header/>
             <section className={styles.Upper}>
-                <HeroTitle urlTarget='#contact' buttonText="We are ready. Let's work!">We Hear your Ideas</HeroTitle>
+                <HeroTitle urlTarget='#about-us' buttonText="Our Services">We Hear your Ideas</HeroTitle>
                 <CardSection margin={100} />
             </section>
         </div>

@@ -1,7 +1,7 @@
 .TriangleSection{
     position: relative;
     background-color: #EDAC17;
-    padding:20px 0;
+    padding:30px 0;
     display: flex;
     flex-direction: column;
 }
@@ -31,6 +31,10 @@
     z-index: 1;
 }
 
+.TriangleSection img{
+    width: 481px;
+    height: 277px;
+}
 .Black,
 .TriangleUp.Black::after,
 .TriangleDown.Black::before{
@@ -94,6 +98,7 @@
 }
 
 .HiddenContent{
+    margin-top: 80px;
     width: 100%;
     overflow: hidden;
     transition: 0.3s ease-in-out;

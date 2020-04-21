@@ -20,6 +20,7 @@ const Home = () => {
                         triangleDown={section.triangleDown}
                         color={section.color}
                         image={section.image}
+                        alt={section.alt}
                         title={section.title}
                         paragraph={section.paragraph}
                         buttonText={section.buttonText}

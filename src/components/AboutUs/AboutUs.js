@@ -10,7 +10,7 @@ const aboutUs =()=>{
                     <img src='https://media-exp1.licdn.com/dms/image/C4E03AQHY0LrksuiWUg/profile-displayphoto-shrink_800_800/0?e=1592438400&v=beta&t=heF6cPIeALuro_oMCWmZZ9_cCYEN1ayadJrtgLqmxe8' alt='camilo'></img>
                     <div>
                         <h3>Camilo Dominguez</h3>
-                        <p>Camilo is Colombian, is a Specialist in Digital Marketing and Full Stack Web Developer. He is a great and patient professional that always put work ahead of all his priorities.</p>
+                        <p>Camilo is Colombian, is a Specialist in Digital Marketing and Full Stack Web Developer. He is a great and patient professional that always puts work ahead of all his priorities.</p>
                         <SocialButtons linkedinY='https://www.linkedin.com/in/camilodominguez/' website='https://camilodh.com/' />
                     </div>
                 </div>

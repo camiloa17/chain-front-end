@@ -1,19 +1,15 @@
 .Button{
     font-size: 20px;
-    border-radius: 50px;
-    min-width: 180px;
+    border-radius: 30px;
+    width: 180px;
     height:54px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 0 20px;
 }
 
-a.Button{
-    width: 250px;
-}
 
 .Button:focus{
     outline: none;

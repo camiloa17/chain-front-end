@@ -1,0 +1,160 @@
+.ProjectSlider{
+    position: relative;
+}
+
+
+.ProjectCard{
+    position: absolute;
+
+}
+
+.LeftArrow,
+.RightArrow{
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 120px;
+    z-index: 2;
+}
+
+.LeftArrow{
+    left: 45px;
+}
+
+.RightArrow{
+    right:45px;
+    left: auto;
+}
+
+.LeftArrow::before,
+.LeftArrow::after,
+.RightArrow::after,
+.RightArrow::before{
+    content: "";
+    width: 24px;
+    height: 6px;
+    position: absolute;
+    background-color: #2B2A2A;
+}
+.LeftArrow::before{
+    top:10px;
+    transform: rotate(-45deg);
+}
+.LeftArrow::after{
+    top: 23px;
+    transform: rotate(45deg);   
+}
+
+.RightArrow::after{
+    top:10px;
+    transform: rotate(45deg);
+}
+.RightArrow::before{
+    top:23px;
+    transform: rotate(-45deg);
+}
+
+.Left{
+    left: -150px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition:all 0.4s ease-in-out;
+}
+
+.Right{
+    right: -150px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.4s  ease-in-out;
+}
+
+.Center{
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+    z-index: 1;  
+    opacity:1;  
+    transition:all 0.4s ease-in-out;
+}
+
+.Center .SliderText{
+    transform: translate(0, 0);
+    transition: all 0.3s ease-in;
+    transition-delay: 0.4s;
+    opacity:1;
+}
+.ProjectCard iframe,
+.ProjectCard video,
+.ProjectCard img{
+    width:550px;
+    height:350px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 10px rgba(43, 42, 42, 0.2);
+}
+
+
+.SliderText{
+    transform: translate(0, 100px);
+    overflow: hidden;
+    opacity:0;
+}
+
+
+.ProjectCard p{
+    width: 500px;
+    line-height: 1.8;
+}
+
+.ProjectCard video:focus{
+    outline: none;
+}
+
+
+@media(max-width:950px){
+    .ProjectSlider{
+        height: 600px;
+        padding-top: 120px;
+    }
+    .ImageContainer{
+        text-align: center;
+    }
+    
+    .ProjectCard iframe,
+    .ProjectCard video,
+    .ProjectCard img{
+        width: 250px;
+        height: 150px;
+    }
+    .ProjectCard p {
+        width: auto;
+    }
+    .Right{
+        right: auto;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%,0) scale(0.7);
+        transition: all 0.4s ease-in-out;
+        opacity: 1;
+    }
+    .Left {
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%,0) scale(0.8);
+        transition: all 0.4s ease-in-out;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .Center{
+        z-index: 2;
+    }
+
+    .LeftArrow{
+        left: 2px;
+    }
+
+    .RightArrow{
+        right:2px;
+    }
+
+    
+}
