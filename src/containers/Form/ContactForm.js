@@ -37,26 +37,26 @@ const ContactForm = props =>{
             
             if(payload.status===200){
                 
-                ReactGA.event({
-                    category: 'Form Sent',
-                    action: 'Form sent succesfull'
-                });
+                // ReactGA.event({
+                //     category: 'Form Sent',
+                //     action: 'Form sent succesfull'
+                // });
                 setSending({ sent: true, sending: false, error: false })
             }else if(payload.status!==200){
                 
-                ReactGA.event({
-                    category: 'Form Sent',
-                    action: 'Form not sent'
-                });
+                // ReactGA.event({
+                //     category: 'Form Sent',
+                //     action: 'Form not sent'
+                // });
                 setSending({ sent: true, sending: false, error: true })
             }
             
         }
     }catch(error){
-            ReactGA.event({
-                category: 'Form Sent',
-                action: 'Form error'
-            });
+            // ReactGA.event({
+            //     category: 'Form Sent',
+            //     action: 'Form error'
+            // });
             setSending({ sent: false, sending: false, error: true });
             
             
@@ -81,7 +81,7 @@ const ContactForm = props =>{
     return(
         <form onSubmit={submit}>
             <p>Contact us to know our prices and services.</p>
-            <input htmlFor='full-name' className={styles.Input} type='text' placeholder='Full name' onChange={changeName} value={fullName} aria-label="Full-name" />
+            <input id='full-name' className={styles.Input} type='text' placeholder='Full name' onChange={changeName} value={fullName} aria-label="Full-name" />
             <input id='email-input' className={styles.Input} type='email' placeholder='Email' onChange={changeEmail} value={email} aria-label="Email" />
             <textarea id='message-box' className={styles.Input} placeholder='Message' spellCheck={"true"} onChange={changeMessage} value={message} aria-label="Message" />
             <Button 

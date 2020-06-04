@@ -6,6 +6,7 @@ import Data from '../../assets/information/Home/InfoHome';
 import Footer from '../Footer/Footer';
 
 const Home = () => {
+
     return (
         <>
             <UpperSection />

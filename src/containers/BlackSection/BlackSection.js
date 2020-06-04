@@ -20,10 +20,10 @@ const BlackSection = () => {
 
     const clickButtonHandler = (id) => {
         if (!contentShowing.element.open) {
-            ReactGA.event({
-                category: 'View Section',
-                action: 'View About us'
-            });
+            // ReactGA.event({
+            //     category: 'View Section',
+            //     action: 'View About us'
+            // });
             document.querySelector(`#${id}`).scrollIntoView();
         }
         changeContent(prev => {

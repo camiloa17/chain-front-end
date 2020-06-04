@@ -48,10 +48,10 @@ const ArrowSection = (props) => {
     
     const clickButtonHandler = (id) => {
         if(!contentShowing.element.open){
-            ReactGA.event({
-                category: 'View Section',
-                action: `${id==='section-2'?'view projects':'view results'}`
-            });
+            // ReactGA.event({
+            //     category: 'View Section',
+            //     action: `${id==='section-2'?'view projects':'view results'}`
+            // });
             document.querySelector(`#${id}`).scrollIntoView();
         }
         changeContent(prev => {
